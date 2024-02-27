@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Css/ManagementSystem.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">List Student </h1>
+        <!-- <p><a href="#" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Info link</a></p> -->
+        
+        <div class="modal fade" id="searchModal" style="width: 900; height: 900;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Search Student</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" id="searchForm">
+                            <div class="containerSearch">
+                                <input type="text" placeholder="Enter the student name ..." class="filter-input">
+                                <div class="output"></div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary" id="addBtn" type="button">Add</button>
+        <button type="button" class="btn btn-success" id="searchBtn">Search</button>
+        <table class="table mt-4" id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Id</th>
+                    <th>Email</th>
+                    <th>Subject one</th>
+                    <th>Subject two</th>
+                    <th>Subject three</th>
+                    <th>GPA</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal fade" id="editModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Student</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="editForm">
+                        <div class="form-group mb-3">
+                            <label for="studentname">Student name</label>
+                            <input type="text" id="editstudentname" class="form-control" placeholder="Enter Student Name" required/>
+            
+                        </div>  
+                        <!-- <div class="form-group mb-3">
+                            <label for="studentid">Student id</label>
+                            <input type="text" id="studentid" class="form-control" placeholder="Enter Student Id" required/>
+            
+                        </div>   -->
+                        <div class="form-group mb-3">
+                            <label for="studentemail">Email</label>
+                            <input type="text" id="editstudentemail" class="form-control" placeholder="Enter Student Email" required/>
+            
+                        </div> 
+                        <div class="form-group mb-3">
+                            <label for="subjectone">Subject one</label>
+                            <input type="text" id="editsubjectone" class="form-control" placeholder="Enter Subject One" required/>
+            
+                        </div> 
+                        <div class="form-group mb-3">
+                            <label for="subjecttwo">Subject two</label>
+                            <input type="text" id="editsubjecttwo" class="form-control" placeholder="Enter Subject Two" required/>
+            
+                        </div> 
+                        <div class="form-group mb-3">
+                            <label for="subjectthree">Subject three</label>
+                            <input type="text" id="editsubjectthree" class="form-control" placeholder="Enter Subject Three" required/>
+            
+                        </div> 
+                        <input type="hidden" id="editStudentId"/>
+                        <input type="hidden" id="editGPA"/>
+                        <button class="btn btn-success" type="submit" id="savebtn">Save</button>
+                        <button class="btn btn-danger ml-2" type="button" id="clsbtn" data-dismiss="modal">Close</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- try write -->
+    <div class="modal fade" id="addModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Student</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="addForm">
+                        <div class="form-group mb-3">
+                            <label for="studentname">Student name</label>
+                            <input type="text" id="addstudentname" class="form-control" placeholder="Enter Student Name" required/>
+            
+                        </div>  
+                        <!-- <div class="form-group mb-3">
+                            <label for="studentid">Student id</label>
+                            <input type="text" id="studentid" class="form-control" placeholder="Enter Student Id" required/>
+            
+                        </div>   -->
+                        <div class="form-group mb-3">
+                            <label for="studentemail">Email</label>
+                            <input type="text" id="addstudentemail" class="form-control" placeholder="Enter Student Email" required/>
+            
+                        </div> 
+                        <div class="form-group mb-3">
+                            <label for="subjectone">Subject one</label>
+                            <input type="text" id="addsubjectone" class="form-control" placeholder="Enter Subject One" required/>
+            
+                        </div> 
+                        <div class="form-group mb-3">
+                            <label for="subjecttwo">Subject two</label>
+                            <input type="text" id="addsubjecttwo" class="form-control" placeholder="Enter Subject Two" required/>
+            
+                        </div> 
+                        <div class="form-group mb-3">
+                            <label for="subjectthree">Subject three</label>
+                            <input type="text" id="addsubjectthree" class="form-control" placeholder="Enter Subject Three" required/>
+            
+                        </div> 
+                        <input type="hidden" id="addStudentId"/>
+                        <input type="hidden" id="addGPA"/>
+                        <button class="btn btn-success" type="submit" id="addstudentbtn">Add</button>
+                        <button class="btn btn-danger ml-2" type="button" id="clsaddbtn" data-dismiss="modal">Close</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../Jsfile/ManagementSystem.js"></script>
+</body>
+</html>

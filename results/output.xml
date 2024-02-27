@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-02-25T23:55:37.281916" rpa="false" schemaversion="5">
+<suite id="s1" name="First-App" source="D:\Maven\first-app">
+<suite id="s1-s1" name="Src" source="D:\Maven\first-app\src">
+<suite id="s1-s1-s1" name="Main" source="D:\Maven\first-app\src\main">
+<suite id="s1-s1-s1-s1" name="Js" source="D:\Maven\first-app\src\main\Js">
+<suite id="s1-s1-s1-s1-s1" name="TestManagementSystem" source="D:\Maven\first-app\src\main\Js\TestManagementSystem">
+<suite id="s1-s1-s1-s1-s1-s1" name="StudentManagementSystem" source="D:\Maven\first-app\src\main\Js\TestManagementSystem\StudentManagementSystem.robot">
+<test id="s1-s1-s1-s1-s1-s1-t1" name="Verify that the user cannot leave blank the Student name field on the Add Student modal" line="61">
+<kw name="Start TestCase">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-25T23:55:37.502966" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5500/src/main/Js/HTML/ManagementSystem.html'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-25T23:55:37.502966" elapsed="2.157540"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-25T23:55:39.661507" elapsed="0.138065"/>
+</kw>
+<status status="PASS" start="2024-02-25T23:55:37.501967" elapsed="2.297605"/>
+</kw>
+<kw name="Leave Blank &quot;Student name&quot; text field">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-25T23:55:39.801578" level="INFO">Clicking button '//*[@id="addBtn"]'.</msg>
+<arg>//*[@id="addBtn"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-25T23:55:39.800585" elapsed="0.206259"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-25T23:55:40.054927" level="INFO">Element '//*[@id="addModal"]/div/div' contains text ''.</msg>
+<arg>//*[@id="addModal"]/div/div</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-02-25T23:55:40.006844" elapsed="0.048083"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-25T23:55:43.056439" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-25T23:55:40.056054" elapsed="3.000385"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-25T23:55:43.057492" level="INFO">Clicking button '//*[@id="addstudentbtn"]'.</msg>
+<arg>//*[@id="addstudentbtn"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-25T23:55:43.056439" elapsed="0.105895"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-25T23:55:46.163979" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-25T23:55:43.163336" elapsed="3.001287"/>
+</kw>
+<status status="PASS" start="2024-02-25T23:55:39.800585" elapsed="6.365154"/>
+</kw>
+<kw name="Finish TestCase">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-25T23:55:46.170693" elapsed="2.178814"/>
+</kw>
+<status status="PASS" start="2024-02-25T23:55:46.168682" elapsed="2.181941"/>
+</kw>
+<status status="PASS" start="2024-02-25T23:55:37.499971" elapsed="10.850652"/>
+</test>
+<status status="PASS" start="2024-02-25T23:55:37.320193" elapsed="11.036917"/>
+</suite>
+<status status="PASS" start="2024-02-25T23:55:37.317197" elapsed="11.044168"/>
+</suite>
+<status status="PASS" start="2024-02-25T23:55:37.312049" elapsed="11.053322"/>
+</suite>
+<status status="PASS" start="2024-02-25T23:55:37.308968" elapsed="11.069925"/>
+</suite>
+<status status="PASS" start="2024-02-25T23:55:37.305916" elapsed="11.076039"/>
+</suite>
+<status status="PASS" start="2024-02-25T23:55:37.287918" elapsed="11.103469"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="First-App">First-App</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Src">First-App.Src</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Main">First-App.Src.Main</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Js">First-App.Src.Main.Js</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="TestManagementSystem">First-App.Src.Main.Js.TestManagementSystem</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1" name="StudentManagementSystem">First-App.Src.Main.Js.TestManagementSystem.StudentManagementSystem</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
